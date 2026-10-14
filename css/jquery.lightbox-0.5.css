@@ -1,0 +1,168 @@
+/**
+ * jQuery lightBox plugin - Modern Dark Theme (Responsive scaling fix)
+ * This jQuery plugin was inspired and based on Lightbox 2 by Lokesh Dhakar (http://www.huddletogether.com/projects/lightbox2/)
+ * and adapted to me for use like a plugin from jQuery.
+ * @name jquery-lightbox-0.5.css
+ * @author Leandro Vieira Pinho - http://leandrovieira.com
+ * @version 0.5
+ * @date April 11, 2008
+ * @category jQuery plugin
+ * @copyright (c) 2008 Leandro Vieira Pinho (leandrovieira.com)
+ * @license CCAttribution-ShareAlike 2.5 Brazil - http://creativecommons.org/licenses/by-sa/2.5/br/deed.en_US
+ * @example Visit http://leandrovieira.com/projects/jquery/lightbox/ for more informations about this jQuery plugin
+ */
+
+#jquery-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 900;
+	width: 100%;
+	background-color: #000;
+}
+
+#jquery-lightbox {
+	display: flex;
+	flex-direction: column !important;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1000;
+	text-align: center;
+	line-height: 0;
+}
+
+#jquery-lightbox a img { 
+	border: none; 
+}
+
+/* A keptarolo doboz */
+#lightbox-container-image-box {
+	width: fit-content !important;
+	max-width: 88vw !important;
+}
+
+#lightbox-container-image { 
+	padding: 10px;
+}
+
+#lightbox-container-image img#lightbox-image,
+#lightbox-image {
+	max-width: 88vw !important;
+	max-height: 72vh !important;
+	width: auto !important;
+	height: auto !important;
+	object-fit: contain !important;
+	display: block;
+	margin: 0 auto;
+	width: fit-content !important;
+}
+
+#lightbox-loading {
+	position: absolute;
+	top: 40%;
+	left: 0;
+	height: 25%;
+	width: 100%;
+	text-align: center;
+	line-height: 0;
+}
+
+#lightbox-nav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 10;
+}
+
+#lightbox-container-image-box > #lightbox-nav { 
+	left: 0; 
+}
+
+#lightbox-nav a { 
+	outline: none;
+}
+
+#lightbox-nav-btnPrev, 
+#lightbox-nav-btnNext {
+	width: 49%;
+	height: 100%;
+	zoom: 1;
+	display: block;
+}
+
+#lightbox-nav-btnPrev { 
+	left: 0; 
+	float: left;
+}
+
+#lightbox-nav-btnNext { 
+	right: 0; 
+	float: right;
+}
+
+#lightbox-container-image-data-box {
+	order: -1 !important;
+	font-family: system-ui, -apple-system, sans-serif;
+	font-size: 13px;
+	background-color: #11161d;
+	border: 1px solid #1f2937;
+	border-bottom: none;
+	border-radius: 12px 12px 0 0;
+	margin: 0 auto !important;
+	line-height: 1.5;
+	box-sizing: border-box;
+	padding: 10px 14px;
+	width: fit-content !important;
+	max-width: 88vw !important;
+}
+
+#lightbox-container-image-data {
+	padding: 0;
+	color: #e2e8f0;
+	display: flex !important;
+	justify-content: space-between !important;
+	align-items: center !important;
+	width: 100%;
+}
+
+#lightbox-container-image-data #lightbox-image-details { 
+	width: auto; 
+	float: none; 
+	text-align: left; 
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}	
+
+#lightbox-image-details-caption { 
+	font-weight: 600; 
+	color: #38bdf8;
+	font-size: 13.5px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 60vw;
+}
+
+#lightbox-image-details-currentNumber {
+	display: inline-block;
+	color: #94a3b8;
+	font-size: 12px;
+	margin: 0;
+	padding: 0;
+	white-space: nowrap;
+}			
+#lightbox-secNav-btnClose {
+	width: auto;
+	float: none;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
