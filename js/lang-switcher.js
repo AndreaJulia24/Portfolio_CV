@@ -4,12 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     function switchLanguage(lang) {
 
-        const validationMessages = {
-        en: "Please fill in this field.",
-        ro: "Vă rugăm să completați acest câmp.",
-        hu: "Kérjük, töltse ki ezt a mezőt."
-    };
-
         const is_en = () => lang === 'en';
         const is_hu = () => lang === 'hu';
         const is_ro = () => lang === 'ro';
@@ -38,14 +32,9 @@ document.addEventListener('DOMContentLoaded', function() {
             textarea.placeholder = textarea.dataset['placeholder' + lang.charAt(0).toUpperCase() + lang.slice(1)];
         });
 
-        const currentValidationMessage = validationMessages[lang] || validationMessages['en'];
-        document.querySelectorAll('input, textarea').forEach(function(input) {
-            input.setCustomValidity(currentValidationMessage);
-        });
-
         localStorage.setItem('preferredLanguage', lang);
     }
-
+    
     const preferredLanguage = localStorage.getItem('preferredLanguage') || 'en';
     switchLanguage(preferredLanguage);
 
